@@ -1,0 +1,30 @@
+---
+const faqs = [
+  { q: 'Who can attend?', a: 'The week is designed for businesses, students, families, researchers, and the wider public.' },
+  { q: 'Is it accessible?', a: 'Each venue page should include access details, step-free info, and support arrangements.' },
+  { q: 'Can I sponsor?', a: 'Yes. Partner and sponsor opportunities are available across the week and for individual events.' },
+];
+---
+
+<section class="section">
+  <div class="container">
+    <p class="kicker">FAQ</p>
+    <div class="grid faq-grid">
+      {faqs.map((item) => (
+        <article class="card">
+          <h2>{item.q}</h2>
+          <p>{item.a}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (max-width: 900px) {
+    .faq-grid { grid-template-columns: 1fr; }
+  }
+</style>

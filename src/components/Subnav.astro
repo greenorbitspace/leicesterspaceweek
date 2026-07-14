@@ -1,0 +1,4 @@
+---
+const { items } = Astro.props as { items: string[] };
+---
+<nav class="subnav" aria-label="On this page"><div class="shell">{items.map((item) => <a href={'#' + item.toLowerCase().replaceAll(' ', '-')}>{item}</a>)}</div></nav>

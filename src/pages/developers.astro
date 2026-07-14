@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'; import PageHero from '../components/PageHero.astro';
+const tokens = `:root {
+  --lsw-orbit-navy: #0B1026;
+  --lsw-beacon-amber: #E2672A;
+  --lsw-civic-violet: #5B2A86;
+  --lsw-steel-silver: #C9CED6;
+  --lsw-paper-white: #F4F2ED;
+  --lsw-ink: #14172B;
+
+  --lsw-font-display: 'Space Grotesk', sans-serif;
+  --lsw-font-body: 'Inter', sans-serif;
+}`;
+---
+<BaseLayout title="Developers — Leicester Space Week brand"><PageHero eyebrow="Developer resources" title="Design tokens, ready to use." intro="Use these core values to bring Leicester Space Week consistency to digital products, templates and partner integrations." /><section class="section"><div class="shell"><div class="section-head"><p class="eyebrow">CSS custom properties</p><h2>The shared foundation.</h2></div><pre class="token"><code>{tokens}</code></pre></div></section></BaseLayout>

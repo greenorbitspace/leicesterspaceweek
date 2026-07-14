@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Hero from '../components/Hero.astro';
+import AudienceCards from '../components/AudienceCards.astro';
+import EventGrid from '../components/EventGrid.astro';
+import WhyLeicester from '../components/WhyLeicester.astro';
+import Timeline from '../components/Timeline.astro';
+import PartnersStrip from '../components/PartnersStrip.astro';
+import FAQ from '../components/FAQ.astro';
+import CTASection from '../components/CTASection.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const events = [
+  {
+    title: 'Cosmic Coffee',
+    audience: 'Businesses and sector partners',
+    summary: 'An informal morning networking event at Space Park Leicester.',
+    href: '/programme/cosmic-coffee',
+  },
+  {
+    title: 'Space Lates',
+    audience: 'Public and families',
+    summary: 'An evening public event at the National Space Centre.',
+    href: '/programme/space-lates',
+  },
+  {
+    title: 'Space Impact Forum',
+    audience: 'Businesses, academia, government',
+    summary: 'A 3-day professional forum on innovation, skills, and sustainability.',
+    href: '/forum',
+  },
+  {
+    title: 'Hackathon',
+    audience: 'Startups, students, makers',
+    summary: 'A 24-48 hour challenge to build space-enabled solutions.',
+    href: '/get-involved',
+  },
+];
+---
+
+<BaseLayout>
+  <body>
+  <SiteHeader />
+  <main>
+    <Hero />
+    <AudienceCards />
+    <EventGrid events={events} />
+    <WhyLeicester />
+    <Timeline />
+    <PartnersStrip />
+    <FAQ />
+    <CTASection />
+  </main>
+  <SiteFooter />
+  </body>
+</BaseLayout>

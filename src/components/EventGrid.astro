@@ -1,0 +1,13 @@
+---
+const events = [
+  ['Space Park Leicester','Cosmic Coffee','An easy, low-barrier morning for the sector to meet—the week’s networking front door.'],
+  ['National Space Centre','Space Lates','An evening for the public: the most visible and shareable night of the Week.'],
+  ['Citywide schools','Teen Careers Fair','Direct routes from classroom to career, building the skills pipeline the sector needs.'],
+  ['City venue · TBC','People, Planet, Pint','Space through a sustainability lens, in an informal evening format.'],
+  ['University of Leicester','Public Lectures','Research excellence made accessible—Leicester’s academics in their own words.'],
+  ['Space Park Leicester','Space Hackathon','A practical innovation sprint turning ideas into working demos over 48 hours.'],
+  ['LCB Depot','Space Artists','A cultural strand that widens participation beyond the traditional science audience.'],
+  ['Leicester Cathedral','Space & Meaning','Where science, ethics and public reflection meet, closing the Week on a civic note.']
+];
+---
+<section class="section"><div class="wrap"><div class="section-head"><p class="eyebrow">The full week</p><h2>Eight events. One citywide story.</h2><p>From networking and careers to culture and hands-on innovation, every event has a distinct audience and a shared purpose.</p></div><div class="events-grid">{events.map(([venue,title,summary]) => <article class="event"><span class="venue">{venue}</span><h3>{title}</h3><p>{summary}</p><footer><span>Who it’s for</span><a href="/programme/">Details →</a></footer></article>)}</div></div></section>

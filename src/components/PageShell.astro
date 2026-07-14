@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+const { eyebrow, title, intro } = Astro.props;
+---
+<BaseLayout title={`${title} — Leicester Space Week`} description={intro}><SiteHeader /><main><section class="page-hero"><div class="wrap"><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{intro}</p></div></section><section class="section"><div class="wrap page-content"><slot /></div></section></main><SiteFooter /></BaseLayout>

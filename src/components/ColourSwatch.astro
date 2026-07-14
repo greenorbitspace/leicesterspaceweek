@@ -1,0 +1,4 @@
+---
+const { name, hex, kind = '', text = '' } = Astro.props;
+---
+<div class={`swatch ${kind}`} style={`background:${hex}`}><strong>{name}</strong><small>{hex}</small>{text && <small>{text}</small>}</div>

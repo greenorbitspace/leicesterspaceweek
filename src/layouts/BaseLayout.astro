@@ -1,0 +1,5 @@
+---
+import '../styles/global.css';
+const { title = 'Leicester Space Week — Exploring Innovation Together', description = 'A citywide festival of space innovation, skills, culture and public wonder.' } = Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><link rel="icon" href="/favicon.svg" /><title>{title}</title></head><body><slot /></body></html>

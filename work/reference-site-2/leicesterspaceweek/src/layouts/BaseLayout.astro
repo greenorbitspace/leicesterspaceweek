@@ -1,0 +1,21 @@
+---
+import '../styles/global.css';
+import SeoHead from '../components/SeoHead.astro';
+
+const {
+  title = 'Leicester Space Week',
+  description = 'Leicester Space Week is a citywide celebration of space innovation, sustainability, careers, culture, and public engagement.',
+  canonical = '/',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SeoHead title={title} description={description} canonical={canonical} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
